@@ -1,32 +1,49 @@
-<form id="taskForm">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Tracker Kuliah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h1>Task Tracker Kuliah</h1>
 
-    <input 
-        id="judul" 
-        type="text" 
-        placeholder="Judul tugas"
-    >
+      <form id="taskForm">
+        <input id="judul" type="text" placeholder="Judul tugas (minimal 3 karakter)">
 
-    <select id="matkul">
+        <div class="row">
+          <select id="matkul">
+            <option>Ethical Hacking dan Uji Keamanan Siber</option>
+            <option>Internet of Things</option>
+            <option>Keamanan Jaringan Komputer</option>
+            <option>Komunikasi Data dan Jaringan Komputer</option>
+            <option>Komunikasi Profesional</option>
+            <option>Pemrograman Web</option>
+          </select>
 
-        <option>Pemrograman Web</option>
-        <option>Basis Data</option>
-        <option>Jaringan Komputer</option>
+          <input id="deadline" type="date">
+        </div>
 
-    </select>
+        <button type="submit">Tambah Tugas</button>
+      </form>
 
+      <p id="error"></p>
 
-    <input 
-        id="deadline"
-        type="date"
-    >
+      <div class="filters">
+        <button class="filter on" data-filter="all" type="button">Semua</button>
+        <button class="filter" data-filter="active" type="button">Aktif</button>
+        <button class="filter" data-filter="done" type="button">Selesai</button>
+      </div>
 
+      <h3 id="counter"></h3>
 
-    <button type="submit">
-        Tambah Tugas
-    </button>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
 
-</form>
-
-<p id="error"></p>
-
-<ul id="taskList"></ul>
+  <script src="app.js"></script>
+</body>
+</html>
