@@ -1,25 +1,32 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Task Tracker Kuliah</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<form id="taskForm">
 
-<body>
+    <input 
+        id="judul" 
+        type="text" 
+        placeholder="Judul tugas"
+    >
 
-<div class="wrapper">
+    <select id="matkul">
 
-    <div class="card">
+        <option>Pemrograman Web</option>
+        <option>Basis Data</option>
+        <option>Jaringan Komputer</option>
 
-        <h1>Task Tracker Kuliah</h1>
-
-    </div>
-
-</div>
+    </select>
 
 
-<script src="app.js"></script>
+    <input 
+        id="deadline"
+        type="date"
+    >
 
-</body>
-</html>
+
+    <button type="submit">
+        Tambah Tugas
+    </button>
+
+</form>
+
+<p id="error"></p>
+
+<ul id="taskList"></ul>
